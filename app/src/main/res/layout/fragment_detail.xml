@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="Repo Name" />
+
+    <TextView
+        android:id="@+id/owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:layout_margin="15dp"
+        android:textSize="15sp"
+        tools:text="Owner Name" />
+
+    <ImageView
+        android:id="@+id/ownerImage"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toEndOf="@id/owner"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        tools:text="Owner Image" />
+
+    <TextView
+        android:id="@+id/repoLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/owner"
+        android:textStyle="italic"
+        android:textColor="#0000FF"
+        android:layout_margin="15dp"
+        tools:text="Check out repository link" />
+
+    <TextView
+        android:id="@+id/stars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/repoLink"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="15dp"
+        android:alpha="0.7"
+        tools:text="100 stars" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/stars"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="15dp"
+        android:alpha="0.8"
+        tools:text="Repo description" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
